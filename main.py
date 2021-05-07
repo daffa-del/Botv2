@@ -12,7 +12,7 @@ from glob import glob
 import pytz
 from datetime import datetime
 
-token = "1626343681:AAH6zWFB1TnDoR6FmlFlqQNsgIRDP__C3qE"
+token = "1816906452:AAEbDESqpE6FLjBfW43plVfrKc0jAbxL7cs"
 bot = amanobot.Bot(token)
 
 queue = {
