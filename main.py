@@ -1,25 +1,23 @@
 import amanobot
-import amanobot.namedtuple
 from amanobot.namedtuple import InlineKeyboardMarkup, InlineKeyboardButton
-from amanobot.namedtuple import ReplyKeyboardMarkup, ReplyKeyboardRemove, KeyboardButton, ForceReply
+from amanobot.namedtuple import ReplyKeyboardMarkup, ReplyKeyboardRemove, KeyboardButton
 import random
-import requests
-from bs4 import BeautifulSoup, NavigableString
 import time
 import os
 import json
-from glob import glob
 import pytz
 from datetime import datetime
 
-token = "1816906452:AAEbDESqpE6FLjBfW43plVfrKc0jAbxL7cs"
+token = "1797322941:AAET79YsdfsZ0xtYUbrz257cHv2KlPZzgY0"
 bot = amanobot.Bot(token)
+
 
 queue = {
 	"free":[],
 	"occupied":{}
 }
 users = []
+use2 = ['1487689122']
 
 def saveConfig(data):
 	return open('config.json', 'w').write(json.dumps(data))
