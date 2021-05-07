@@ -8,7 +8,7 @@ import json
 import pytz
 from datetime import datetime
 
-token = "1797322941:AAET79YsdfsZ0xtYUbrz257cHv2KlPZzgY0"
+token = "1816906452:AAEbDESqpE6FLjBfW43plVfrKc0jAbxL7cs"
 bot = amanobot.Bot(token)
 
 
@@ -17,7 +17,7 @@ queue = {
 	"occupied":{}
 }
 users = []
-use2 = ['1487689122']
+use2 = ['1816906452']
 
 def saveConfig(data):
 	return open('config.json', 'w').write(json.dumps(data))
