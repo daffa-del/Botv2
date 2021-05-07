@@ -109,8 +109,8 @@ def handle(update):
 			#except:
 				#pass
 
-		#elif text == "/setting":
-		#	bot.sendMessage(uid, "Pilih Jenis Kelamin Knda", reply_markup={"inline_keyboard": [[{"text":"Pria👨‍🦰", "callback_data":"gender-laki"}, {"text":"Wanita👩🏻", "callback_data":"gender-perempuan"}]]})
+		#elif text == 'setting':
+		#	bot.sendMessage(uid, "Pilih Jenis Kelamin anda", reply_markup={"inline_keyboard": [[{"text":"Pria👨‍🦰", "callback_data":"gender-laki"}, {"text":"Wanita👩🏻", "callback_data":"gender-perempuan"}]]})
 
 		#if "data" in update:
 		#	if update["data"] == "gender-laki":
@@ -121,7 +121,7 @@ def handle(update):
 		#			bot.sendMessage(uid, "Gender telah di setting ke Wanita👩🏻")
 
 		elif text == 'Admin':
-				bot.sendMessage(uid, "Di Nonaktifkan Sementara!")
+				bot.sendMessage(uid, "@VinsxV!")
 
 		#if text == "/pw":
 		#	text = update["text"].split()[0]
@@ -139,13 +139,13 @@ def handle(update):
 		#	except:
 		#		pass
 
-		elif text == 'Total Users😈':
+		elif text == 'Total Users 🌐':
 			if not uid in queue["occupied"]:
 				file = json.loads(open("config.json", "r").read())
 				text = "Users Sange saat ini : " + str(len(file)) + " User Sange"
 				bot.sendMessage(uid, text)
 
-		elif text == 'Profile📌':
+		elif text == 'Profile 🛡️':
 			if "username" not in update["from"]:
 				return bot.sendMessage(uid, "Harap Isi Username Kamu!!")
 			if "last_name" not in update["from"]:
@@ -171,32 +171,32 @@ def handle(update):
 
 		elif text == '❌ Exit' and uid in queue["occupied"]:
 			print('[SB] ' + str(uid) + ' meninggalkan jodohnya ' + str(queue["occupied"][uid]))
-			keyboard = ReplyKeyboardMarkup(keyboard=[['Search 👥','Profile📌'], ['Total Users😈','Menu🐱']], resize_keyboard=True,one_time_keyboard=True)
-			bot.sendMessage(uid, "Obrolan telah berakhir\n\nLink Bokep : https://semawur.com/ccRSCsI7u")
-			bot.sendMessage(uid, "Selamat Bergabung DiBot sange🙊\n\nJangan Lupa Grup @cewecowobersatu", reply_markup=keyboard)
-			bot.sendMessage(queue["occupied"][uid], "Pasangan kamu keluar dari obrolan\n\nDia membagikan Link Bokep : https://semawur.com/ccRSCsI7u", reply_markup=keyboard)
+			keyboard = ReplyKeyboardMarkup(keyboard=[['Search 👥','Profile 👁️'], ['Total Users 🌐','Menu 🛡️']], resize_keyboard=True,one_time_keyboard=True)
+			bot.sendMessage(uid, "Obrolan telah berakhir")
+			bot.sendMessage(uid, "Selamat Bergabung DiBot sange🙊\n\nJangan Lupa Grup @BetaFWBot", reply_markup=keyboard)
+			bot.sendMessage(queue["occupied"][uid], "Pasangan kamu keluar dari obrolan\n\nMasih Beta !", reply_markup=keyboard)
 			del queue["occupied"][queue["occupied"][uid]]
 			del queue["occupied"][uid]
 
 		elif text == 'Menu🐱':
 			keyboard = ReplyKeyboardMarkup(keyboard=[
-                ['Link Bokep', 'Donasi', 'Admin'],['Bot VCS'],['🔙 Main Menu']
+                ['Link Rate PAP', 'Donasi', 'Admin'],['Bot v2'],['🔙 Main Menu']
             ], resize_keyboard=True, one_time_keyboard=True)
-			bot.sendMessage(uid, "WAJIB JOIN GRUP INI @cewecowobersatu\nGAK JOIN GA VCS :v", reply_markup=keyboard)
+			bot.sendMessage(uid, "WAJIB JOIN GRUP INI @BetaFWBot\nGAK JOIN GA VCS :v", reply_markup=keyboard)
 
-		elif text == 'Link Bokep':
+		elif text == 'Link Rate PAP':
 			bot.sendMessage(uid, 'Cek bokep viral, dan pap sex dibawah😙',reply_markup = InlineKeyboardMarkup(inline_keyboard=[
-                                    [InlineKeyboardButton(text="Bokep Viral😍", url='https://semawur.com/ccRSCsI7u')],
-                                    [InlineKeyboardButton(text="Keleksi Pap Viral😍", url='https://semawur.com/StJkG3lhFPa')]
+                                    [InlineKeyboardButton(text="Bokep Viral😍", url='https://localhost')],
+                                    [InlineKeyboardButton(text="Rate PAP😍", url='https:/localhost')]
                                 ]
                             ))	
-			bot.sendMessage(uid, "Wajib Join Grup @cewecowobersatu")
+			bot.sendMessage(uid, "Wajib Join Grup @BetaFWBot")
 			
 		elif text == 'Donasi':
-			bot.sendMessage(uid, "Mau donasi ke admin?\nCukup dengan cara klik link aja🙂\nLink : https://realsht.mobi/GArv4")
+			bot.sendMessage(uid, "Mau donasi ke admin?\nCukup dengan cara klik link aja🙂\nLink : Do'a 😁")
 			
-		elif text == 'Bot VCS':
-			bot.sendMessage(uid, "Coba Bot Vcs Free\n[BOT VCS FREE](https://t.me/VCS_TALENHIJAB_bot?start=r05827436540)", parse_mode= 'MarkDown',disable_web_page_preview= True)
+		elif text == 'Bot v2':
+			bot.sendMessage(uid, "Coba Bot v2\n[BOT V2](@Beta)", parse_mode= 'MarkDown',disable_web_page_preview= True)
 			
 		elif text == '🔙 Main Menu':
 			keyboard = ReplyKeyboardMarkup(keyboard=[['Search 👥','Profile📌'], ['Total Users😈','Menu🐱']], resize_keyboard=True, one_time_keyboard=True)
