@@ -1,20 +1,3 @@
-Skip to content
-davi78
-/
-testbott
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-testbott/main1.py
-@davi78
-davi78 update bot
- 1 contributor
-247 lines (209 sloc)  10.3 KB
 import amanobot
 from amanobot.namedtuple import InlineKeyboardMarkup, InlineKeyboardButton
 from amanobot.namedtuple import ReplyKeyboardMarkup, ReplyKeyboardRemove, KeyboardButton
@@ -262,16 +245,3 @@ if __name__ == '__main__':
 
 	while True:
 		time.sleep(1)
-© 2021 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-Loading complete
