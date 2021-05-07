@@ -96,7 +96,7 @@ def handle(update):
 		if text == "/start" or text == "/refresh":
 			if not uid in queue["occupied"]:
 				asw = ReplyKeyboardMarkup(keyboard=[['Search 👥','Profile📌'], ['Total Users😈','Menu🐱']], resize_keyboard=True, one_time_keyboard=True)
-				bot.sendMessage(uid, "Selamat Bergabung Di\nBot sange🙊\n\nJangan Lupa Grup @cewecowobersatu\nLINK BOKEP [FREE](https://semawur.com/ccRSCsI7u)", parse_mode= 'MarkDown',disable_web_page_preview= True ,
+				bot.sendMessage(uid, "Selamat Bergabung Di\nBot sange🙊\n\nJangan Lupa Grup @BetaFWBot\nLINK Endors(https://localhost)", parse_mode= 'MarkDown',disable_web_page_preview= True ,
 				reply_markup=asw)
 
 		#if update["text"].split()[0] == "/p":
@@ -109,7 +109,7 @@ def handle(update):
 			#except:
 				#pass
 
-		#elif text == 'setting':
+		#elif text == "/setting":
 		#	bot.sendMessage(uid, "Pilih Jenis Kelamin anda", reply_markup={"inline_keyboard": [[{"text":"Pria👨‍🦰", "callback_data":"gender-laki"}, {"text":"Wanita👩🏻", "callback_data":"gender-perempuan"}]]})
 
 		#if "data" in update:
@@ -121,7 +121,7 @@ def handle(update):
 		#			bot.sendMessage(uid, "Gender telah di setting ke Wanita👩🏻")
 
 		elif text == 'Admin':
-				bot.sendMessage(uid, "@VinsxV!")
+				bot.sendMessage(uid, "@VinsxV")
 
 		#if text == "/pw":
 		#	text = update["text"].split()[0]
@@ -149,7 +149,7 @@ def handle(update):
 			if "username" not in update["from"]:
 				return bot.sendMessage(uid, "Harap Isi Username Kamu!!")
 			if "last_name" not in update["from"]:
-				return bot.sendMessage(uid, "Harap Isi Nama Belakang Kamu!!")
+				return bot.sendMessage(uid, "Harap isi Nama Kamu!!")
 			if update["from"]["last_name"] != None:
 				name = update["from"]["first_name"] + " " + update["from"]["last_name"]
 				_id = update["from"]["id"]
@@ -178,14 +178,14 @@ def handle(update):
 			del queue["occupied"][queue["occupied"][uid]]
 			del queue["occupied"][uid]
 
-		elif text == 'Menu🐱':
+		elif text == 'Menu 🛡️':
 			keyboard = ReplyKeyboardMarkup(keyboard=[
-                ['Link Rate PAP', 'Donasi', 'Admin'],['Bot v2'],['🔙 Main Menu']
+                ['Rule!', 'Donasi', 'Admin'],['Bot v2'],['🔙 Main Menu']
             ], resize_keyboard=True, one_time_keyboard=True)
 			bot.sendMessage(uid, "WAJIB JOIN GRUP INI @BetaFWBot\nGAK JOIN GA VCS :v", reply_markup=keyboard)
 
 		elif text == 'Link Rate PAP':
-			bot.sendMessage(uid, 'Cek bokep viral, dan pap sex dibawah😙',reply_markup = InlineKeyboardMarkup(inline_keyboard=[
+			bot.sendMessage(uid, 'Cek bokep viral, dan pap dibawah😙',reply_markup = InlineKeyboardMarkup(inline_keyboard=[
                                     [InlineKeyboardButton(text="Bokep Viral😍", url='https://localhost')],
                                     [InlineKeyboardButton(text="Rate PAP😍", url='https:/localhost')]
                                 ]
